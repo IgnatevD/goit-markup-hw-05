@@ -25,6 +25,10 @@ p {
   padding: 0px;
 }
 
+img {
+  display: block;
+}
+
 .list {
   padding: 0;
   margin: 0;
@@ -81,6 +85,10 @@ p {
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -131,6 +139,10 @@ p {
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: 0.02em;
+
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-nav .link:hover,
@@ -138,6 +150,7 @@ p {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
+
 .item-telefon > span,
 .item-email > span {
   margin-top: auto;
@@ -149,6 +162,10 @@ p {
   height: 16px;
   fill: var(--praimeri-text-color);
   margin-right: 10px;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-telefon {
@@ -156,6 +173,10 @@ p {
   height: 14px;
   fill: var(--praimeri-text-color);
   margin-right: 10px;
+
+  transition-property: fill;
+  transition-duration: 1250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-nav .link:hover > svg,
@@ -192,12 +213,16 @@ p {
   color: var(--titel-text-color);
   font-weight: 500;
   line-height: 1.6;
+
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-sorting:hover,
 .button-sorting:focus {
   color: var(--white-text-color);
-  background: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 .button-sorting:hover,
@@ -308,6 +333,30 @@ p {
   margin-right: 30px;
 }
 
+.item {
+  position: relative;
+}
+
+.item-work {
+  width: 370px;
+  height: 70px;
+
+  position: absolute;
+  bottom: 0%;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.item-work p {
+  margin-top: 27px;
+  margin-bottom: 27px;
+
+  font-weight: bold;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white-text-color);
+}
+
 /*  Наша команда */
 .section-comanda {
   padding-top: 94px;
@@ -368,6 +417,16 @@ p {
   width: inherit;
   height: inherit;
   border-radius: 50%;
+  background-color: none;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-li .link:hover,
+.icon-li .link:focus {
+  background-color: var(--accent-color);
 }
 
 .icon-li:not(:last-child) {
@@ -379,16 +438,15 @@ p {
   height: 44px;
   padding: 12px;
   fill: var(--praimeri-text-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-network:hover,
 .icon-network:focus {
   fill: var(--white-text-color);
-}
-
-.team-icon .link:hover,
-.iteam-icon .link:focus {
-  background-color: var(--accent-color);
 }
 
 .shadow {
@@ -412,6 +470,10 @@ p {
   border-radius: 4px;
   width: 170px;
   height: 92px;
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .partner-li:hover,
@@ -440,6 +502,10 @@ p {
   padding-top: 21px;
   padding-bottom: 20px;
   fill: var(--praimeri-text-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-partner:hover,
@@ -521,6 +587,10 @@ p {
   height: 44px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .fotter-li:hover {
   background-color: var(--accent-color);
@@ -582,8 +652,9 @@ p {
   margin-left: 30px;
   margin-bottom: 30px;
 }
-.card img {
-  display: block;
+
+.card .item {
+  position: relative;
 }
 
 .card-container {
@@ -599,7 +670,6 @@ p {
   line-height: 2;
   letter-spacing: 0.06em;
 }
-
 .card .link {
   text-decoration: none;
 }
@@ -615,9 +685,26 @@ p {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-/* .portfolio .title {
-  visibility: hidden;
-  font-size: 0%;
-  padding: 0;
-  margin: 0;
-} */
+.second-background {
+  position: absolute;
+  top: 0;
+  width: 370px;
+  height: 294px;
+  margin-bottom: 173px;
+  background: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+
+.second-text {
+  margin: 63px 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--white-text-color);
+  opacity: inherit;
+}
+
+.second-background:hover {
+  opacity: 1;
+}
