@@ -571,19 +571,28 @@ p {
 .card {
   display: flex;
   flex-wrap: wrap;
-}
-.card .item {
-  border: 1px solid #eeeeee;
-  margin-bottom: 30px;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
-.card .item:not(:nth-last-of-type(3n)) {
+.card > .item {
+  overflow: hidden;
+  flex-basis: calc(100% / 3 - 30px);
+  border: 1px solid #eeeeee;
   margin-left: 30px;
+  margin-bottom: 30px;
+}
+.card img {
+  display: block;
+}
+
+.card-container {
+  padding: 20px 24px;
 }
 
 .card .title {
-  padding-top: 20px;
-  padding-left: 24px;
+  margin-bottom: 4px;
+
   color: var(--titel-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -596,9 +605,6 @@ p {
 }
 
 .card .text {
-  padding-left: 24px;
-  padding-bottom: 20px;
-
   color: var(--praimeri-text-color);
   font-size: 16px;
   line-height: 1.9;
@@ -609,9 +615,9 @@ p {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio .title {
+/* .portfolio .title {
   visibility: hidden;
   font-size: 0%;
   padding: 0;
   margin: 0;
-}
+} */
