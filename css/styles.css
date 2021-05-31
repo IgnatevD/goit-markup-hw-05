@@ -705,6 +705,6 @@ img {
   opacity: inherit;
 }
 
-.second-background:hover {
+.item:hover .second-background {
   opacity: 1;
 }
