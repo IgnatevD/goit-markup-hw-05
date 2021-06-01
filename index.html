@@ -48,7 +48,7 @@
         <!-- Герой -->
         <section class="hero">
             <h1 class="title">Эффективные решения для вашего бизнеса</h1>
-            <button type="button" class="button"> Заказать услугу </button>
+            <button type="button" class="button" data-modal-open> Заказать услугу </button>
         </section>
 
         <!-- Наши преимущества -->
@@ -359,8 +359,12 @@
                     </a>
                 </li>
             </ul>
-            
         </section>
+            <div class="backdrop is-hidden" data-modal>
+               <div class="modal">
+                   <button class="button-modal" data-modal-close><img src="./img/Vector-x.svg" alt="Крестик" width="11px" height="11px" class="button-x"></button>
+               </div>
+            </div>
     </main>
 
     <!-- Футер -->
@@ -417,6 +421,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
