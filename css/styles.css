@@ -145,7 +145,7 @@ img {
   line-height: 1.1;
   letter-spacing: 0.02em;
 
-  transition-property: color, fill;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -153,7 +153,6 @@ img {
 .contacts-nav .link:hover,
 .contacts-nav .link:focus {
   color: var(--accent-color);
-  fill: var(--accent-color);
 }
 
 .item-telefon > span,
@@ -165,22 +164,20 @@ img {
 .icon-email {
   width: 16px;
   height: 16px;
-  fill: var(--praimeri-text-color);
   margin-right: 10px;
-
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-telefon {
   width: 10px;
   height: 14px;
-  fill: var(--praimeri-text-color);
   margin-right: 10px;
+}
+
+.contacts-nav .link > svg {
+  fill: var(--praimeri-text-color);
 
   transition-property: fill;
-  transition-duration: 1250ms;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -202,13 +199,6 @@ img {
   line-height: 1.9;
   letter-spacing: 0.06em;
 }
-
-/* .button-active {
-  color: var(--white-text-color);
-  background: var(--accent-color);
-  font-weight: 500;
-  line-height: 1.6;
-} */
 
 .button-sorting {
   padding: 6px 22px;
@@ -429,7 +419,7 @@ img {
   width: inherit;
   height: inherit;
   border-radius: 50%;
-  background-color: none;
+  background-color: var(--white-text-color);
 
   transition-property: background-color;
   transition-duration: 250ms;
@@ -452,7 +442,7 @@ img {
   fill: var(--praimeri-text-color);
 
   transition-property: fill;
-  transition-duration: 250ms;
+  transition-duration: 2250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -671,6 +661,15 @@ img {
   border: 1px solid #eeeeee;
   margin-left: 30px;
   margin-bottom: 30px;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card .item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-container {
@@ -686,6 +685,7 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
 }
+
 .card .link {
   text-decoration: none;
 }
@@ -696,10 +696,6 @@ img {
   line-height: 1.9;
 }
 
-.card .item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 .card-img {
   position: relative;
   width: 370px;
@@ -715,7 +711,7 @@ img {
 
   transform: translateY(100%);
   transition-property: transform;
-  transition-duration: 1250ms;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -775,6 +771,5 @@ img {
   border-radius: 50%;
 }
 .button-x {
-  display: inline-block;
-  
+  margin: auto;
 }
