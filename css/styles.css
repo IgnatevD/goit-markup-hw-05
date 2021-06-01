@@ -188,6 +188,7 @@ img {
 
 /* button */
 .button {
+  cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   padding: 10px 32px;
   border-radius: 4px;
@@ -201,6 +202,7 @@ img {
 }
 
 .button-sorting {
+  cursor: pointer;
   padding: 6px 22px;
   border-radius: 4px;
   border: 0px;
@@ -523,10 +525,18 @@ img {
 }
 
 /* Футер*/
+.footer {
+  background: #2f303a;
+}
+
 .footer-conteiner {
   display: flex;
-  background: #2f303a; /* Временный фон чтоб был виден текст*/
-  padding-left: 215px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+
+  padding-left: 15px;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -563,6 +573,11 @@ img {
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+}
+
+.footer-link {
+  width: 209px;
+  height: 80px;
 }
 
 /* .footer .link:hover,
@@ -615,6 +630,56 @@ img {
   width: 20px;
   height: 20px;
   fill: var(--white-text-color);
+}
+
+/* Форма отправки email */
+.form-email {
+  margin-left: 93px;
+}
+
+.form-text-email {
+  margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--white-text-color);
+}
+
+.input-email {
+  margin-right: 12px;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+::-webkit-input-placeholder {
+  font-size: 16px;
+  padding-left: 16px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.button-sanding-email {
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  padding: 0;
+  border: 0;
+  background-color: var(--accent-color);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--white-text-color);
 }
 
 /* Страница портфолио сайта */
